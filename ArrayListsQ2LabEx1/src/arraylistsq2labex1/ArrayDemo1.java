@@ -1,26 +1,48 @@
 package arraylistsq2labex1;
 import java.util.*;
 
+
 class Student {
     String Name;
     int Score;
-    
+    int Highest=0;
+    int counter=0;
+    int o;
+    int temp;
     
     public void displayArray(ArrayList<Student> AS) {
-//<your code to display the array elements>
-
+        for (int i=0;i<AS.size();i++){
+        System.out.println(AS.get(i).Name);
+        System.out.println(AS.get(i).Score);
+        }
+        
     }
     
      public void searchHighestScore(ArrayList<Student> AS) {
-//<your code to search for the highest score in the array>
+         for (int i=0; i<AS.size();i++){
+         if(AS.get(i).Score>Highest)
+            Highest=AS.get(i).Score;
+         }
+
+        System.out.println("The highest score is "+Highest);
 
     }    
     public void sortScores(ArrayList<Student> AS) {
 //        	<your code to sort the array>
+            for (int i=0; i<AS.size();i++){
+                for (int x=0; i<AS.size()-o;x++){
+                     if(AS.get(i).Score>Highest)
+                        AS.NameI[x];
+                        Highest=AS.get(i).Score;
+                        
+                     }
+                o++;
+            }
 
-    }
+                System.out.println("The highest score is "+Highest);
+            }
     
-    public void sortNames(ArrayList<Student> AS) {
+    public void sortNames (ArrayList<Student> AS) {
 //<your code to sort the array according the names>      
    }
 }
@@ -46,11 +68,11 @@ public class ArrayDemo1 {
 
         method.sortScores(StudentArrayList);
         
-        method.displayArray(StudentArrayList);
+        //method.displayArray(StudentArrayList);
 
         method.sortNames(StudentArrayList);
         
-        method.displayArray(StudentArrayList);        
+        //method.displayArray(StudentArrayList);        
         
    
     }

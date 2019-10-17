@@ -6,9 +6,9 @@ class Student {
     String Name;
     int Score;
     int Highest=0;
-    int counter=0;
+    int Lowest=0;
     int o;
-    int temp;
+    int temp=0;
     
     public void displayArray(ArrayList<Student> AS) {
         for (int i=0;i<AS.size();i++){
@@ -20,7 +20,7 @@ class Student {
     
      public void searchHighestScore(ArrayList<Student> AS) {
          for (int i=0; i<AS.size();i++){
-         if(AS.get(i).Score>Highest)
+            if(AS.get(i).Score>Highest)
             Highest=AS.get(i).Score;
          }
 
@@ -30,13 +30,9 @@ class Student {
     public void sortScores(ArrayList<Student> AS) {
 //        	<your code to sort the array>
             for (int i=0; i<AS.size();i++){
-                for (int x=0; i<AS.size()-o;x++){
-                     if(AS.get(i).Score>Highest)
-                        AS.NameI[x];
-                        Highest=AS.get(i).Score;
+                     if(AS.get(i).Score<Lowest)
                         
-                     }
-                o++;
+                        
             }
 
                 System.out.println("The highest score is "+Highest);
